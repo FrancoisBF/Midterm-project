@@ -20,19 +20,20 @@ $(() => {
   callData();
 
   function createUrlElement(url){
-    console.log(`${url.url}`);
     const html = `
         <div class="col-lg-4">
+          <a href="http://${url.url}">
           <div class="card" style="width: 30rem">
             <img class="card-img-top" src=${url.image} alt="Card image cap">
             <div class="card-block">
+            </a>
 
               <h4 class="card-title">${url.title}</h4>
               <p class="card-text">${url.url}</p>
               <p class="card-text">${url.description}</p>
-              <p class="card-text">Category:${url.category}</p>
+
               <div class="footer">
-              <fieldset class="rating">
+                  <fieldset class="rating + i">
                   <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
                   <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
                   <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
@@ -45,13 +46,12 @@ $(() => {
                   <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset>
               </div>
-              <div id="addcomment"> <a href='#'>add comment</a></div>
-        <div id='postComment'>
-            <textarea name='comment' id='comment'></textarea>
-            <input type='submit' value='Post Comment' />
-        </div>
+
             </div>
+            </div>
+            <p class="category">#${url.category}</p>
           </div>
+
         </div>`;
 
     return html;

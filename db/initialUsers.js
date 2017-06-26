@@ -35,10 +35,6 @@ knex
   .insert([
     {user_id: id_map.Nick, category: 'awesome', url: 'www.example.com', description: 'Of all the inventions of humans, the computer is going to rank near or at the top as history unfolds and we look back. It is the most awesome tool that we have ever invented. I feel incredibly lucky to be at exactly the right place in Silicon Valley, at exactly the right time, historically, where this invention has taken form.', title: 'Example.com', image: 'http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'},
     {user_id: id_map.Nick, category: 'stupid', url: 'www.google.com', description: 'I was using Twitter a lot on my phone, and was realising there was a massive gap between the link on the tweet and the full story. If you could come up with a summary layer to show in Twitter, that would be awesome.', title: 'Google', image: 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png'},
-    {user_id: id_map.Bill, category: 'health', url: 'www.facebook.com', description: 'do you even lift, sir', title: 'facebook.com', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLgmw9roFNJCQTKqiNF5GGLkTEnQyeqZlrPF_ud1M_shg57NBdT96bA'},
-    {user_id: id_map.Nick, category: 'awesome', url: 'www.example.com', description: 'sick', title: 'Example.com', image: 'http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg'},
-    {user_id: id_map.Nick, category: 'stupid', url: 'www.google.com', description: 'why does this exist', title: 'Google', image: 'https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png'},
-    {user_id: id_map.Bill, category: 'health', url: 'www.facebook.com', description: 'do you even lift, sir', title: 'facebook.com', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkLgmw9roFNJCQTKqiNF5GGLkTEnQyeqZlrPF_ud1M_shg57NBdT96bA'},
   ])
   .into('urls')
   .returning('id')
